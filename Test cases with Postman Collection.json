@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "8ba291e7-be48-42f5-8338-2fa7ecba3c03",
+		"name": "AzureFunctionsEmployeeAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20001615"
+	},
+	"item": [
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"firstName\": \"MAlyas\",\r\n    \"surName\": \"Awais\",\r\n    \"email\": \"MAlyas@Test.com\",\r\n    \"jobTitle\": \"Software Engineer\",\r\n    \"startDate\": \"2022-01-10T00:00:00\",\r\n    \"endDate\": \"2023-06-10T00:00:00\",\r\n    \"profileImage\": \"asfadfsadjfhjadshfjadshfkjasdhfkjads\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7012/api/Employee/Update/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7012",
+					"path": [
+						"api",
+						"Employee",
+						"Update",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"firstName\":\"TestFname2\",\"surName\":\"TestLName2\",\"email\":\"TestFname2@Test.com\",\"jobTitle\":\"Software Engineer\",\"startDate\":\"2023-03-10T00:00:00\",\"endDate\":\"2023-04-30T00:00:00\",\"profileImage\":\"jagsdhfgdsahfgsahdgfhdsagfkjasd\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7012/api/Employee/Create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7012",
+					"path": [
+						"api",
+						"Employee",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7012/api/Employee/GetById/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7012",
+					"path": [
+						"api",
+						"Employee",
+						"GetById",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7012/api/Employee/GetAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7012",
+					"path": [
+						"api",
+						"Employee",
+						"GetAll"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AzureFunctionsVersion>v4</AzureFunctionsVersion>
+	  <!--<_FunctionsSkipCleanOutput>true</_FunctionsSkipCleanOutput>-->
+
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Properties\serviceDependencies.local.json.user" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="FluentValidation" Version="11.6.0" />
+    <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="4.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EmployeeAzureFunctionsAPI.BusinessLayer\EmployeeAzureFunctionsAPI.BusinessLayer.csproj" />
+    <ProjectReference Include="..\EmployeeAzureFunctionsAPI.DataAccessLayer\EmployeeAzureFunctionsAPI.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\EmployeeAzureFunctionsAPI.DomainLayer\EmployeeAzureFunctionsAPI.DomainLayer.csproj" />
+    <ProjectReference Include="..\EmployeeAzureFunctionsAPI.Shared\EmployeeAzureFunctionsAPI.Shared.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+</Project>
