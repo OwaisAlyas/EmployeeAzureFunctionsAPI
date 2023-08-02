@@ -114,7 +114,7 @@ namespace EmployeeAzureFunctionsAPI.AzureFunctions
 
         [FunctionName("Search")]
         public async Task<IActionResult> Search(
-          [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = "Employee/Search")] HttpRequest req,
+          [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "Employee/Search")] HttpRequest req,
           ILogger log)
         {
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();

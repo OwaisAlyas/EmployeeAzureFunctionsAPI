@@ -6,7 +6,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-DROP TABLE [dbo].[Employee]
+DROP TABLE  [dbo].[Employee] 
 
 CREATE TABLE [dbo].[Employee](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
@@ -138,3 +138,23 @@ BEGIN
         AND (@StartDate IS NULL OR StartDate >= @StartDate)    
   AND (@EndDate IS NULL OR EndDate <= @EndDate)    
 END
+
+GO
+
+DROP PROCEDURE [dbo].[DeleteEmployeeById]
+GO
+
+Create proc [dbo].[DeleteEmployeeById]
+@Id int
+as
+begin 
+if exists(select 1 from Employee WHERE Id=@Id)
+	Begin
+		DELETE FROM Employee WHERE Id=@Id
+		Select 1;
+	ENd
+else
+	Begin
+	Select 0;
+	ENd
+End
