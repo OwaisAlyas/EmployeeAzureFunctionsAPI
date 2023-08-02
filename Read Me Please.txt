@@ -2,7 +2,7 @@
 Steps to follow to run the project.
 
 
-1) Download and Clone the project from Git (https://github.com/OwaisAlyas/EmployeeAzureFunctionsAPI_AwaisAlyasRathore)
+1) Download and Clone the project from Git (https://github.com/OwaisAlyas/EmployeeAzureFunctionsAPI)
 2) Open The project 
 3) Copp the DB script from Project file (EmployeeAzureFunctionsAPI.DataAccessLayer\EmployeeDbScripts) and Run t=in SQL Server
 4) Configer the DB Connection string in project file (EmployeeAzureFunctionsAPI\local.settings.json)
